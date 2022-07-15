@@ -64,7 +64,8 @@ tar -xvzf deepspeech-0.6.0-models.tar.gz
 ```
 pip3 install pocketsphinx
 ```
-- Make sure we have up-to-date versions of pip, setuptools and wheel
+- If you getting any type error
+- Make sure you have up-to-date versions of pip, setuptools and wheel
 ```
 python -m pip install --upgrade pip setuptools wheel
 
@@ -84,6 +85,11 @@ To solve this problem, Try to install below prerequisite.
 ```
 sudo apt-get install libasound2-dev
 ```
+Else try to install 
+```
+sudo apt-get install -y python python-dev python-pip build-essential swig git libpulse-dev
+``` 
+Then install Pocketsphinx library.
 
 7. Type the following command inside the directory on your terminal
   ```
