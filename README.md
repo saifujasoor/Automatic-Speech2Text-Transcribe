@@ -99,3 +99,7 @@ Then install Pocketsphinx library.
 
 ## Project Demo
 
+
+https://user-images.githubusercontent.com/76810003/179233248-607bd2b6-5e1d-4d18-a44e-f9edfb6faf02.mp4
+
+
