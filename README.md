@@ -27,7 +27,7 @@ Below  are the methods of SpeechRecognition library:
 ## Real Time Speech to Text
 recognize_google()  method of speech recognition has used for real time speech to text transcribe.
 
-## 💻Technology Stack which i have used in project###
+## 💻Technology Stack which i have used in project ##
 - Frontend : HTML, BOOTSTRAP, Recorder.js, AudioDisplay.js
 - Backend : Flask
 
@@ -47,6 +47,7 @@ pip3 install -r requirements.txt
 ```
  
 4- Install DeepSpeech and Speechrecognition
+
 ```
 pip3 install deepspeech==0.6.0
 
@@ -54,17 +55,22 @@ pip3 install SpeechRecognition
 ```
 
 5- Download and unzip en-US deepspeech model, this will take a while
+
 ```
 curl -LO https://github.com/mozilla/DeepSpeech/releases/download/v0.6.0/deepspeech-0.6.0-models.tar.gz
 
 tar -xvzf deepspeech-0.6.0-models.tar.gz
 ```
+
 6- Install Python interface to CMU Sphinxbase and Pocketsphinx libraries
+
 ```
 pip3 install pocketsphinx
 ```
+
 - If you getting any type error
 - Make sure you have up-to-date versions of pip, setuptools and wheel
+
 ```
 python -m pip install --upgrade pip setuptools wheel
 
@@ -72,6 +78,7 @@ pip3 install --upgrade pocketsphinx
 ```
 
 - If you getting any error during installation  as below :-
+
 ```
 ake: Entering directory '/opt/assistant-relay/node_modules/speaker/build'
   CC(target) Release/obj.target/output/deps/mpg123/src/output/alsa.o
@@ -80,18 +87,24 @@ ake: Entering directory '/opt/assistant-relay/node_modules/speaker/build'
           ^~~~~~~~~~~~~~~~~~
 compilation terminated.
 ```
+
 To solve this problem, Try to install below prerequisite.
+
 ```
 sudo apt-get install libasound2-dev
 ```
+
 Else try to install 
+
 ```
 sudo apt-get install -y python python-dev python-pip build-essential swig git libpulse-dev
 ``` 
+
 Then install Pocketsphinx library.
 
 7. Type the following command inside the directory on your terminal
-  ```
+
+```
   python3 mainfile.py
   ```
   
