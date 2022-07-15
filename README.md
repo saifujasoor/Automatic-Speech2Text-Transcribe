@@ -23,6 +23,7 @@ Below  are the methods of SpeechRecognition library:
 - recognize_wit() for WIT.AI: Using speech recognition service provided by wit.ai
 - IBM Speech to Text: SpeechRecognition’s method recgonize_ibm() didn’t work due to credential issue as IBM has udpated the credential system. So we didn’t use it. Instead we used IBM’s library for that.
 <br> Visit www.pragnakalp.com for more info.
+- - Dataset link [on Internet Archive.](https://archive.org/details/stackexchange)
 
 ## Real Time Speech to Text
 recognize_google()  method of speech recognition has used for real time speech to text transcribe.
@@ -31,4 +32,65 @@ recognize_google()  method of speech recognition has used for real time speech t
 - Frontend : HTML, BOOTSTRAP, Recorder.js, AudioDisplay.js
 - Backend : Flask
 
+## Getting Started
+
+### Prerequisites
+Make sure you have Python, Flask installed on your system to run this project.
+
+### Execution guide
+1. Download/clone  the contents of the repository
+2.  Create and activate a virtual envirnoment
+3. Install the necessary prerequisites are by following command:-
+
+```
+pip3 install -r requirements.txt
+
+```
+ 
+4- Install DeepSpeech and Speechrecognition
+```
+pip3 install deepspeech==0.6.0
+
+pip3 install SpeechRecognition
+```
+
+5- Download and unzip en-US deepspeech model, this will take a while
+```
+curl -LO https://github.com/mozilla/DeepSpeech/releases/download/v0.6.0/deepspeech-0.6.0-models.tar.gz
+
+tar -xvzf deepspeech-0.6.0-models.tar.gz
+```
+6- Install Python interface to CMU Sphinxbase and Pocketsphinx libraries
+```
+pip3 install pocketsphinx
+```
+- Make sure we have up-to-date versions of pip, setuptools and wheel
+```
+python -m pip install --upgrade pip setuptools wheel
+
+pip3 install --upgrade pocketsphinx
+```
+
+- If you getting any error during installation  as below :-
+```
+ake: Entering directory '/opt/assistant-relay/node_modules/speaker/build'
+  CC(target) Release/obj.target/output/deps/mpg123/src/output/alsa.o
+../deps/mpg123/src/output/alsa.c:19:10: fatal error: alsa/asoundlib.h: No such file or directory
+ #include <alsa/asoundlib.h>
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+```
+To solve this problem, Try to install below prerequisite.
+```
+sudo apt-get install libasound2-dev
+```
+
+7. Type the following command inside the directory on your terminal
+  ```
+  python3 mainfile.py
+  ```
+  
+4. Click http://127.0.0.1:5002 (Press CTRL+C to quit)
+
+## Project Demo
 
