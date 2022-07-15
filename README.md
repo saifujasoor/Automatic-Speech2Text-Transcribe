@@ -11,7 +11,7 @@ I have used two pretrained models to transcribe voice to text.
 ## 1. DeepSpeech
 DeepSpeech is an open source Speech-To-Text engine, using a model trained by machine learning techniques based on Baidu's Deep Speech research paper. Project DeepSpeech uses Google's TensorFlow to make the implementation easier.
 DeepSpeech is a neural network architecture first published by a research team at Baidu. In 2017, Mozilla created an open source implementation of this paper - dubbed “Mozilla DeepSpeech”.
-<br> Visit Mozilla DeepSpeech github for more info.
+- - Visit  [Mozilla deepspeech.]([https://www.pragnakalp.com/speech-recognition-speech-to-text-python-using-google-api-wit-ai-ibm-cmusphinx/#:~:text=3.-,CMUSPHINX,due%20to%20missing%20swig%20file](https://github.com/mozilla/DeepSpeech).) for more info.
 
 ## 2. CMU Sphinx
 CMUSphinx is an open source speech recognition system for mobile and server applications. Supported languages: C, C++, C#, Python, Ruby, Java, Javascript.
@@ -22,8 +22,7 @@ Below  are the methods of SpeechRecognition library:
 - recognize_sphinx() for CMUSphinx: Using CMU Sphinx – requires installing PocketSphinx
 - recognize_wit() for WIT.AI: Using speech recognition service provided by wit.ai
 - IBM Speech to Text: SpeechRecognition’s method recgonize_ibm() didn’t work due to credential issue as IBM has udpated the credential system. So we didn’t use it. Instead we used IBM’s library for that.
-<br> Visit www.pragnakalp.com for more info.
-- - Dataset link [on Internet Archive.](https://archive.org/details/stackexchange)
+- - Visit  [pragnakalp.](https://www.pragnakalp.com/speech-recognition-speech-to-text-python-using-google-api-wit-ai-ibm-cmusphinx/#:~:text=3.-,CMUSPHINX,due%20to%20missing%20swig%20file.) for more info.
 
 ## Real Time Speech to Text
 recognize_google()  method of speech recognition has used for real time speech to text transcribe.
