@@ -1,0 +1,125 @@
+{% include "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech Recognition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
+	<!-- Latest compiled and minified Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/static/header_file.css">
+<link rel="stylesheet" type="text/css" href="/static/footer_file.css">
+<link rel="stylesheet" type="text/css" href="/static/main.css">
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body style="background-color:rgb(161, 180, 216);">
+    <section class="text-gray-700 body-font">
+            
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6" style="padding-right: 1px;">
+                <img class="object-cover object-center rounded" alt="hero" src="static/s2t1.png">
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+<center>
+<b><h1 class="h1"> Transcribe your voice to text  </h1></b>
+    
+<br><br> <b> <h3>Step 1 - Record your voice</h3></b>
+    <br>
+
+    <div style="max-width: 28em;">
+		<p>Select .wav format only</p>
+
+		<select id="encodingTypeSelect">
+		  <option value="wav">Waveform Audio (.wav)</option>
+		</select>
+        <br>
+        <br>
+        <br>
+		<div id="controls">
+			<button id="recordButton"><b>Record</b></button>
+			<button id="stopButton" disabled><b>Stop</b></button>
+		</div>
+        <br>
+		<div id="formats"></div>
+		<pre>Log</pre>
+		<pre id="log"></pre>
+        <br>
+        <br>
+        
+       <b> <h3>Step 2 - Download your record </h3> </b>
+		
+		    <ol id="recordingsList"></ol>
+	</div>
+
+    <div id="speechContainer">
+        <br>
+
+      <b>  <h3>Step 3 - Upload your .wav file</h3> </b>
+        <br>
+      
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file"/>
+            <br>
+
+            <br>
+         <b>   <h3>Step 4 - Convert audio to text </h3> </b>
+         <br>
+           <b> <input type="submit" id="submitButton" value="Transcribe"/></b>
+        </form>
+        {% if transcript != "" %}
+            <div id="speechTranscriptContainer">
+               <b> <h1 >Did you say !</h1></b><br>
+                <p id="speechText">{{ transcript }}</p>
+            </div>
+        </div>
+    </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        {% endif %}
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+
+
+
+
+</center>
+
+
+
+
+
+
+
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <script src="{{ url_for('static', filename='js/WebAudioRecorderWav.min.js') }}" ></script>
+    <script src="{{ url_for('static', filename='js/WebAudioRecorder.min.js') }}" ></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}" ></script>
+    
+
+
+
+</div>
+</section>
+
+</body>
+</html>
+
+{% extends "footer.html" %}
+{% block footer%}fixed{% endblock %}
